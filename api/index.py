@@ -12,11 +12,7 @@ import json
 app = FastAPI()
 
 @app.get("/api")
-def news(response: Response):
-    response.headers["Cache-Control"] = "max-age=86400, immutable, stale-while-revalidate"
-    response.headers["Content-Type"] = "application/json; charset=utf-8"
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    
+def news():   
     return 'hello'
 
 
