@@ -4,7 +4,6 @@
 # @Time  : 2022/11/14 12:42:57
 
 from flask import Flask
-import dbconfig
 
 app = Flask(__name__)
 
