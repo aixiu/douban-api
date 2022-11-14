@@ -1,16 +1,18 @@
-# !/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Author: Aixiu
-# @Time  : 2022/11/14 00:34:37
-
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return 'Hello, world !!'
+    return 'Hello, world'
 
-if __name__ == '__main__':
-    app.run()
+
+@app.route('/test')
+def test():
+    return 'Test'
+
+@app.route('/result')
+def result():
+   dict = {'phy':50,'che':60,'maths':70}
+   return render_template('result.html', result = dict)
