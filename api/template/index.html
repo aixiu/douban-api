@@ -1,0 +1,11 @@
+<h3>留言板</h3>
+<hr>
+<form action="/send" method="post">
+    <label for="text">输入你想留下的话语: </label>
+    <input type="text" name="text" id="text" required>
+    <input type="submit" value="发送">
+</form>
+<hr>
+{% for i in talk %}
+<p>{{i}}</p>
+{% endfor %}
