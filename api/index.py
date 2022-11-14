@@ -3,18 +3,10 @@
 # @Author: Aixiu
 # @Time  : 2022/11/14 12:42:57
 
-import json
-import os
-import random
-from datetime import datetime
-
-import requests
-from flask import Flask, jsonify, request
+from flask import Flask
 import dbconfig
 
 app = Flask(__name__)
-
-
 
 @app.route('/')
 def index():
