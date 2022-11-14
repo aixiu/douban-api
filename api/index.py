@@ -34,11 +34,11 @@ def index():
         return jsonify(error_data)
     url = f'https://movie.douban.com/subject/{vod_douban_id}/'
     
-    flie_path = f'./douban/'
+    flie_path = f'./api/douban'
     
     # 创建一个文件夹，保存所有的图片
     if not os.path.exists(flie_path):
-        os.mkdir('./douban/')
+        os.mkdir('./api/douban/')
     
     # 获取文件夹下所有文件名
     file_name_list = os.listdir(flie_path)    
